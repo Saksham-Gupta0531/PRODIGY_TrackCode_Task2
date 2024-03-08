@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #4e54c8, #8f94fb, #00d2ff, #3a7bd5, #3a6186);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite alternate, redGradient 3s linear infinite alternate;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1000px; /* Define perspective for 3D effect */
+  }
+  
+  .stopwatch-container {
+    width: 300px;
+    height: 150px;
+    background-color: #d3f1a6;
+    border: 1px solid #ccc;
+    border-radius: 10%; /* Make the container circular */
+    transform-style: preserve-3d; /* Preserve 3D transformations */
+    transform: rotateX(5deg); /* Apply initial rotation for 3D effect */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* Add black shadow to bottom-right */
+  }
+  
+  
+
+  .stopwatch {
+    font-size: 3em;
+    color: #333;
+    text-align: center;
+  }
+  
+  .controls {
+    margin-top: 20px;
+  }
+  
+  .controls button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .controls button:hover {
+    background-color: #555;
+  }
+  
+  .hours, .minutes, .seconds, .milliseconds {
+    padding: 0 5px;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes redGradient {
+    0% {
+      background-color: #ff0000; /* Red */
+    }
+    50% {
+      background-color: #f00; /* Short notation for Red */
+    }
+    100% {
+      background-color: #ff0000; /* Red */
+    }
+  }
+  
